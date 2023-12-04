@@ -13,6 +13,7 @@ function newItem() {
     let list = $('#list');
     list.append(li);
   }
+  
 
   // Crossing out an item //
   li.on('dblclick', function crossOut() {
@@ -33,3 +34,11 @@ function newItem() {
   // Reorder the items //
   list.sortable();
 }
+
+// eventlistener for pressing enter to work like an add button //
+$('#input').on('keydown', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault(); //preventing the default behavior of pressing enter
+        $('#button').click();
+    }
+  })

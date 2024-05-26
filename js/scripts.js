@@ -33,6 +33,7 @@ function newItem() {
 
   // Reorder the items //
   list.sortable();
+
 }
 
 // eventlistener for pressing enter to work like an add button //
@@ -42,3 +43,7 @@ $('#input').on('keydown', function(e) {
         $('#button').click();
     }
   })
+
+  
+
+ 
